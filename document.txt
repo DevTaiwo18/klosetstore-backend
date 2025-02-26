@@ -1,0 +1,9 @@
+// Day 1: 
+Initialised the backend folder
+Installed express, cors, dotenv, mongoose, nodemon
+Fix Backend Entry Point Issue
+Updated package.json to set server.js as the correct entry point.
+Verified Nodemon runs properly with npm run dev.
+Push Fix to GitHub
+Committed changes with message: Fix: Set correct entry point to server.js in package.json
+Pushed to the repository.
