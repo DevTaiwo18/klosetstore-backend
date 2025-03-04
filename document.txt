@@ -13,3 +13,7 @@ Connected our database MONGODB
 Updated our env with MONGOBD URI and MONGO DB password
 Updated server.js for database connection
 Pushed changes to GitHub
+
+
+Next: 
+Handle alll error
