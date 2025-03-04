@@ -7,3 +7,9 @@ Verified Nodemon runs properly with npm run dev.
 Push Fix to GitHub
 Committed changes with message: Fix: Set correct entry point to server.js in package.json
 Pushed to the repository.
+
+Day 2: 
+Connected our database MONGODB
+Updated our env with MONGOBD URI and MONGO DB password
+Updated server.js for database connection
+Pushed changes to GitHub
