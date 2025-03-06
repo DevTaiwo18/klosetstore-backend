@@ -16,4 +16,4 @@ Pushed changes to GitHub
 
 
 Next: 
-Handle alll error
+Handling of errors before development
