@@ -1,0 +1,145 @@
+KlosetStore Backend Development Plan
+Tech Stack:
+Database: MongoDB (Mongoose ODM)
+Server: Node.js + Express.js
+Authentication: JWT
+Payments: Paystack (Subscriptions, Split Payments)
+Real-time Chat: WebSockets (Socket.io)
+Notifications: Nodemailer (Email), WebSockets
+Security: Rate limiting, IP blocking, data encryption
+1. User Management
+✅ Authentication & Authorization
+
+User registration (Buyer, Seller, Admin)
+Email verification with a token
+Secure JWT-based authentication (access & refresh tokens)
+Role-based access control (Buyer, Seller, Admin)
+Password reset via email
+✅ Profile Management
+
+Update personal details (name, email, phone, etc.)
+Change password & security settings
+View order history and transaction details
+✅ Admin Features
+
+Approve/reject new store applications
+Manage users (ban, delete, verify)
+Monitor fraudulent activities
+2. Store & Product Management
+✅ Store Setup & Approval
+
+Sellers apply for a store → Admin approves/rejects
+Store details: Name, logo, banner, description, contact info
+Unique store URL (klosetstore.com/{store_name})
+✅ Product Management
+
+Sellers add/edit/delete products
+Support for product variants (sizes, colors)
+Image upload (Cloudinary for storage)
+Product approval process (Admin must approve before listing)
+Stock management system
+Discount & price changes
+✅ Store Policies
+
+Sellers set return, refund, and shipping policies
+Buyers view seller policies before purchasing
+3. Order & Payment System
+✅ Order Processing
+
+Buyer places an order → Seller gets notified
+Order statuses: Pending → Processing → Shipped → Delivered
+Automated email notifications for status changes
+✅ Payments (Paystack Integration)
+
+Buyers pay via Paystack (Split Payment API)
+5% commission is deducted before transferring to sellers
+Subscription payments for premium stores (Monthly/Yearly)
+Transaction records stored in DB
+✅ Payout System
+
+Automatic weekly payouts to seller's linked bank account
+Admin dashboard to view all payouts & pending transactions
+✅ Refunds
+
+Paystack handles refunds directly
+Refund status stored in DB & visible to both admin and sellers
+✅ Fraud Detection
+
+Flag multiple failed payment attempts
+Flag suspiciously high-value transactions for review
+4. Real-Time Features (WebSockets)
+✅ In-App Chat (Socket.io)
+
+Buyer & Seller chat system
+Real-time messaging, order-related discussions
+Chat history stored in MongoDB
+✅ Live Order Tracking
+
+Real-time updates on order status using WebSockets
+5. Notifications & Communication
+✅ Email Notifications (Nodemailer)
+
+Order confirmation, shipping updates
+Payment success & failure alerts
+Store approval/rejection emails
+Weekly payout confirmations
+✅ Admin Mass Notifications
+
+Send platform updates & promotional messages
+✅ Buyer Wishlist & Store Following
+
+Buyers can save stores/products
+Notify buyers when saved products are restocked
+6. Security & Compliance
+✅ Data Protection
+
+JWT & refresh tokens for authentication
+Encrypted storage for sensitive data
+Rate limiting & IP blocking for brute-force protection
+✅ Compliance
+
+GDPR-compliant user data handling
+Refund & dispute resolution policies
+7. Admin Dashboard Features
+✅ Store & Product Approvals
+
+View pending stores & approve/reject
+Review & approve new products
+✅ User & Order Management
+
+View & manage buyers and sellers
+Monitor orders & handle disputes
+✅ Revenue Tracking & Analytics
+
+View platform earnings
+Track store sales & commission reports
+✅ Fraud & Dispute Resolution
+
+Monitor flagged transactions
+Resolve disputes between buyers & sellers
+Development Roadmap
+Phase 1: Core Backend Setup (API + Auth)
+✅ Set up MongoDB schema for users, stores, products, orders
+✅ Implement JWT authentication (Login, Signup, Role-based access)
+✅ Set up Email verification & Password reset
+✅ Implement Admin store approval system
+
+Phase 2: Payments & Orders
+✅ Integrate Paystack Split Payments
+✅ Implement Order Processing System
+✅ Set up Weekly Payout System
+✅ Add Refund Tracking System
+
+Phase 3: Chat & Real-Time Features
+✅ Develop WebSocket-based chat system
+✅ Implement Real-time order tracking
+
+Phase 4: Admin & Security Features
+✅ Build Admin Dashboard for approvals & monitoring
+✅ Implement Fraud detection system
+✅ Set up Notifications (Emails, In-app alerts)
+
+Phase 5: Testing & Deployment
+✅ Test all API endpoints (Postman)
+✅ Conduct Security checks (rate limiting, encryption, role-based access)
+✅ Deploy Backend on Railway/Render
