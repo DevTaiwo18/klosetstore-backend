@@ -1,19 +1,43 @@
-// Day 1: 
-Initialised the backend folder
-Installed express, cors, dotenv, mongoose, nodemon
-Fix Backend Entry Point Issue
-Updated package.json to set server.js as the correct entry point.
-Verified Nodemon runs properly with npm run dev.
-Push Fix to GitHub
-Committed changes with message: Fix: Set correct entry point to server.js in package.json
-Pushed to the repository.
+**Day 1: Backend Initialization**
+- Initialized the backend folder.
+- Installed required dependencies: `express`, `cors`, `dotenv`, `mongoose`, `nodemon`.
+- Fixed backend entry point issue:
+  - Updated `package.json` to set `server.js` as the correct entry point.
+  - Verified that `nodemon` runs properly using `npm run dev`.
+ 
 
-Day 2: 
-Connected our database MONGODB
-Updated our env with MONGOBD URI and MONGO DB password
-Updated server.js for database connection
-Pushed changes to GitHub
+---
 
+**Day 2: Database Connection**
+- Connected MongoDB database.
+- Updated `.env` file with:
+  - MongoDB URI.
+  - MongoDB password.
+- Updated `server.js` to establish a database connection.
+- Pushed changes to GitHub.
+ 
 
-Next: 
-Handling of errors before development
+---
+
+**Day 3: Authentication & Role-Based Access Control**
+- Installed additional dependencies:
+  - `express`, `mongoose`, `dotenv`, `bcryptjs`, `jsonwebtoken`, `nodemailer`, `cors`, `cookie-parser`.
+- Implemented authentication system:
+  - User registration with password hashing.
+  - Role-based access control (User/Admin roles).
+  - JWT-based authentication.
+- Added email verification system:
+  - Generates a verification token and sends an email upon signup.
+  - Users must verify their email before logging in.
+- Implemented password reset system:
+  - Generates a secure reset token.
+  - Sends a reset password email with a unique link.
+  - Allows users to reset their password securely.
+- Pushed changes to GitHub.
+- **Commit Message:** `Feat: Implement authentication, role-based access control, and email verification`
+- **Pull Request:** `Authentication system with email verification and password reset`
+
+---
+
+**Next Steps:**
+- Implement Store Approval feature.

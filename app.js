@@ -11,5 +11,4 @@ router.get('/hello', (req, res) => {
     res.json({ message: "Hello from API!" });
 });
 
-// Export Router
 module.exports = router;

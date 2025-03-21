@@ -1,4 +1,0 @@
-PORT = your port
-MONGODB_URI=   mono URI
-MONGODB_PASSWORD= your mongodb password
- 
